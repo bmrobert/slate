@@ -216,6 +216,12 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 <td>End date for change detection.</td>
 </tr>
 </tbody></table>
+
+<h2 id="get-a-specific-worker">Get a Specific Worker</h2>
+
+<p>This endpoint retrieves a specific worker based on worker ID.</p>
+
+<h3 id="http-request">HTTP Request</h3>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A1234B"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"workerType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Employee"</span><span class="p">,</span><span class="w">
@@ -261,12 +267,6 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<h2 id="get-a-specific-worker">Get a Specific Worker</h2>
-
-<p>This endpoint retrieves a specific worker based on worker ID.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
 <p><code class="prettyprint">GET GET https://api-workers-internal-dev.cloudhub.io/api/1.0/workers/{workerID}</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
