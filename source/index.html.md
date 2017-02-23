@@ -14,7 +14,6 @@ toc_footers:
 
 includes:
   - bottleShots
-  - errors
 
 search: true
 ---
