@@ -191,7 +191,7 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 </span></code></pre>
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://api-workers-internal-dev.cloudhub.io/api/1.0/workers</code></p>
+<p><code class="prettyprint">GET https://api-workers-internal-dev.cloudhub.io/api/1.0/bottleShots</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -209,11 +209,9 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 </tr>
 </tbody></table>
 
-<h2 id="get-a-specific-worker">Get a Specific Worker</h2>
+<h2 id="get-a-specific-bottle-shot">Get a Specific Bottle Shot</h2>
 
 <p>This endpoint retrieves a specific bottle shot based on the product&rsquo;s GTIN.</p>
-
-<h3 id="http-request">HTTP Request</h3>
 
 <blockquote>
 <p>Sample JSON response for /bottleShots/{gtin}:</p>
@@ -236,7 +234,9 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
   </span><span class="nt">"webImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/webimage-4D27936B-F803-4DC7-80DB39A24800A652.png"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p><code class="prettyprint">GET GET https://api-workers-internal-dev.cloudhub.io/api/1.0/workers/{workerID}</code></p>
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET GET https://api-workers-internal-dev.cloudhub.io/api/1.0/bottleShots/{gtin}</code></p>
 
 <h3 id="uri-parameters">URI Parameters</h3>
 
