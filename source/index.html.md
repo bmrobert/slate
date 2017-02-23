@@ -8,30 +8,22 @@ title: Constellation Brands API Catalog
   - javascript*/
 
 toc_footers:
-  - <a href='#'>Sign up for an API Key</a>
-  - <a href='https://github.com/tripit/slate'>Powered by Slate</a>
-  - <p>&copy; Constellation Brands, Inc. 2017</p>
+  - <a href='#'>Contact Us</a>
+  - <p>Constellation Brands API Catalog v1</p>
+  - <p>&copy; 2017 Constellation Brands, Inc.</p>
 
 includes:
-  - worker
+  - bottleShots
   - errors
 
 search: true
 ---
 
-# Constellation Brands API Catalog
+# Getting Started
 
 Constellation Brands APIs provide instant access to a variety of datasets including Items, Brands, and Worker Demographics. Explore the available APIs to see setup instructions and sample responses.
 
-# Getting Started
-
-Visit the [developer portal](https://anypoint.mulesoft.com/apiplatform/cbrands/#/portals) to request an API key.
-
-<aside class="notice">
-You must create an Anypoint Platform account (free) in order to request API access.
-</aside>
-
-##Accessing an API Directly
+##Accessing Our APIs
 
 ```shell
 curl "https://mocksvc.mulesoft.com/what/is/the/url/1.0/items/1002"
@@ -59,7 +51,9 @@ curl "https://mocksvc.mulesoft.com/what/is/the/url/1.0/items/1002"
 }
 ```
 
-Use a basic GET request to retrieve API data. For example, to find information for a specific item, you can query our Items API using the appropriate item ID. The ID for Inniskillin Riesling is 1002, so you can retrieve it as shown here.
+Each API in this catalog allows you to request an API key. Browse for your desired API and fill out the corresponding form to provide some basic contact information. You will receive an API key and additional instructions via email once approved.
+
+Once you have an API key, you can use a basic GET request to retrieve API data. For example, to find information for a specific item, you can query our Items API using the appropriate item ID. The ID for Inniskillin Riesling is 1002, so you can retrieve it as shown here.
 
 <aside class="notice">
 Be sure to replace YourAPIKey with the API key that you received after registering.
