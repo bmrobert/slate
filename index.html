@@ -108,27 +108,19 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign up for an API Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Powered by Slate</a></li>
-            <li><p>&copy; Constellation Brands, Inc. 2017</p></li>
+            <li><a href='#'>Contact Us</a></li>
+            <li><p>Constellation Brands API Catalog v1</p></li>
+            <li><p>&copy; 2017 Constellation Brands, Inc.</p></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="constellation-brands-api-catalog">Constellation Brands API Catalog</h1>
+        <h1 id="getting-started">Getting Started</h1>
 
 <p>Constellation Brands APIs provide instant access to a variety of datasets including Items, Brands, and Worker Demographics. Explore the available APIs to see setup instructions and sample responses.</p>
 
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Visit the <a href="https://anypoint.mulesoft.com/apiplatform/cbrands/#/portals">developer portal</a> to request an API key.</p>
-
-<aside class="notice">
-You must create an Anypoint Platform account (free) in order to request API access.
-</aside>
-
-<h2 id="accessing-an-api-directly">Accessing an API Directly</h2>
+<h2 id="accessing-our-apis">Accessing Our APIs</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"https://mocksvc.mulesoft.com/what/is/the/url/1.0/items/1002"</span>
   -H <span class="s2">"Authorization: YourAPIKey"</span>
 </code></pre>
@@ -152,19 +144,26 @@ You must create an Anypoint Platform account (free) in order to request API acce
   </span><span class="nt">"vintageDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N/A"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Use a basic GET request to retrieve API data. For example, to find information for a specific item, you can query our Items API using the appropriate item ID. The ID for Inniskillin Riesling is 1002, so you can retrieve it as shown here.</p>
+<p>Each API in this catalog allows you to request an API key. Browse for your desired API and fill out the corresponding form to provide some basic contact information. You will receive an API key and additional instructions via email once approved.</p>
+
+<p>Once you have an API key, you can use a basic GET request to retrieve API data. For example, to find information for a specific item, you can query our Items API using the appropriate item ID. The ID for Inniskillin Riesling is 1002, so you can retrieve it as shown here.</p>
 
 <aside class="notice">
 Be sure to replace YourAPIKey with the API key that you received after registering.
 </aside>
 
-          <h1 id="worker-demographics-api">Worker Demographics API</h1>
+          <h1 id="bottle-shots-api">Bottle Shots API</h1>
 
-<p>This API retrieves demographic information for employees of Constellation Brands and 3<sup>rd</sup> party partners. The API supports retrieval of all employees&rsquo; information, specific employees, and employees added/modified within specific date range. The API doesn&rsquo;t provide the entire dataset in one call, but does support pagination. Consumers can dictate how many records they need to retrieve.</p>
+<p>This API returns promotional product images (&ldquo;bottle shots&rdquo;) based on GTIN or UPC. It includes some identifying information about the product as well as a variety of image formats:
+* Mini image (PNG)
+* Standard final JPEG (JPG)
+* Web image (full-size PNG)</p>
 
-<h2 id="get-all-workers">Get All Workers</h2>
+<p>The API can return a specific product or all product images modified since a specific date.</p>
 
-<p>Retrieves all workers that match the filtering criteria.</p>
+<h2 id="get-all-bottle-shots">Get All Bottle Shots</h2>
+
+<p>Retrieves all bottle shots that have been modified since the specified date.</p>
 
 <p><em>Note: Pagination applies to the results of this API call. If workerType is not specified, employees will precede distributors.</em></p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
