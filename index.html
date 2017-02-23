@@ -154,10 +154,13 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 
           <h1 id="bottle-shots-api">Bottle Shots API</h1>
 
-<p>This API returns promotional product images (&ldquo;bottle shots&rdquo;) based on GTIN or UPC. It includes some identifying information about the product as well as a variety of image formats:
-* Mini image (PNG)
-* Standard final JPEG (JPG)
-* Web image (full-size PNG)</p>
+<p>This API returns promotional product images (&ldquo;bottle shots&rdquo;) based on GTIN or UPC. It includes some identifying information about the product as well as a variety of image formats:</p>
+
+<ul>
+<li>Mini image (PNG)</li>
+<li>Standard final JPEG (JPG)</li>
+<li>Web image (full-size PNG)</li>
+</ul>
 
 <p>The API can return a specific product or all product images modified since a specific date.</p>
 
@@ -165,25 +168,25 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 
 <p>Retrieves all bottle shots that have been modified since the specified date.</p>
 
-<p><em>Note: Pagination applies to the results of this API call. If workerType is not specified, employees will precede distributors.</em></p>
+<blockquote>
+<p>Sample JSON response for /bottleShots:</p>
+</blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"workers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A12345"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Employee"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"middleName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Margaret"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"jobTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atom Smasher"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ZZ72R2"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Distributor"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"James"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bond"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"jobTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spy"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="nt">"brandFamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"754"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-05T21:10:18Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-06T16:24:26Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-12-16T18:12:09Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"psd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9135BEC3-CF40-4819-B7C9C16DD7E92BF1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"itemSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"219"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"miniImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/mini-0AA4663D-852F-4DA2-97877C3DF1AD6BA7.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014 CHS Cabernet Sauvignon 750ml Bottle Shot"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"standardFinalJpeg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/Standard Final JPG-CHS_Bottle_Shot.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"thul"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/thul-7ECA50DA-3BF8-4872-9BC1D6B268CFD9F2.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"upc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"184745000126"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"varietal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"198"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"vintage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"webImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/webimage-4D27936B-F803-4DC7-80DB39A24800A652.png"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <h3 id="http-request">HTTP Request</h3>
@@ -200,75 +203,42 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 </tr>
 </thead><tbody>
 <tr>
-<td>workerType</td>
-<td>string</td>
-<td>Employee or distributor.</td>
-</tr>
-<tr>
-<td>lastEventDateAfter</td>
-<td>string</td>
-<td>Start date for change detection. Use with lastEventDateBefore to create a date range.</td>
-</tr>
-<tr>
-<td>lastEventDateBefore</td>
-<td>string</td>
-<td>End date for change detection.</td>
+<td>dateModified</td>
+<td>datetime</td>
+<td>Retrieve all bottle shots modified after this datetime</td>
 </tr>
 </tbody></table>
 
 <h2 id="get-a-specific-worker">Get a Specific Worker</h2>
 
-<p>This endpoint retrieves a specific worker based on worker ID.</p>
+<p>This endpoint retrieves a specific bottle shot based on the product&rsquo;s GTIN.</p>
 
 <h3 id="http-request">HTTP Request</h3>
+
+<blockquote>
+<p>Sample JSON response for /bottleShots/{gtin}:</p>
+</blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A1234B"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"workerType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Employee"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"middleName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"preferredName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Johnny Dough-Boy"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dateOfBirth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1900-01-12"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EST"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"preferredLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en_US"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"createdOnDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-28T16:41:41.090Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"job"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123AB"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doughnut Retriever"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"isManager"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"organizationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doughnut Research and Technology"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"managerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"234US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"managerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Susan B Goode"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Constellation Brands"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doughnut Retrieval"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"division"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Snacks"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"costCenterId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SD2SY3"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"costCenterName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doughnut Retrieval - General"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1994-06-03"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"workContactInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"johnnyDB@cbrands.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11234567890"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"High Point"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"address1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"207 High Point Drive"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Victor"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"state_province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14564"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"personalContactInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"mobilePhoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"homePhoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doeboy@gmail.com"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"brandFamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"754"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-05T21:10:18Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-06T16:24:26Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-12-16T18:12:09Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"psd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9135BEC3-CF40-4819-B7C9C16DD7E92BF1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"itemSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"219"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"miniImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/mini-0AA4663D-852F-4DA2-97877C3DF1AD6BA7.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014 CHS Cabernet Sauvignon 750ml Bottle Shot"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"standardFinalJpeg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/Standard Final JPG-CHS_Bottle_Shot.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"thul"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/thul-7ECA50DA-3BF8-4872-9BC1D6B268CFD9F2.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"upc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"184745000126"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"varietal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"198"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"vintage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"webImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3cy9zhslanhfa.cloudfront.net/media/final/5be7df2b-2a56-417f-84fe-dec1227f9116/webimage-4D27936B-F803-4DC7-80DB39A24800A652.png"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p><code class="prettyprint">GET GET https://api-workers-internal-dev.cloudhub.io/api/1.0/workers/{workerID}</code></p>
 
-<h3 id="url-parameters">URL Parameters</h3>
+<h3 id="uri-parameters">URI Parameters</h3>
 
 <table><thead>
 <tr>
@@ -278,67 +248,9 @@ Be sure to replace YourAPIKey with the API key that you received after registeri
 </tr>
 </thead><tbody>
 <tr>
-<td>workerId</td>
+<td>gtin</td>
 <td>string</td>
-<td>The ID of the worker to retrieve.</td>
-</tr>
-</tbody></table>
-
-          <h1 id="errors">Errors</h1>
-
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td>The GTIN of the product to retrieve</td>
 </tr>
 </tbody></table>
 
